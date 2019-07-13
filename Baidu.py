@@ -110,6 +110,7 @@ class BaiDu(object):
                 except BaseException as e:
                     # 最后一页没找到
                     print("未找到翻页按钮，当前ua:%s" % self.header)
+                    # 某些机型首页的翻页为加载更多 获取有点问题 正在剔除这一批ua
                     self.driver.quit()
             self.page += 1
             return content_list
