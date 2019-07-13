@@ -30,7 +30,7 @@ web_list = [
 
 def push(data):
     if data:
-        db = pymysql.connect("45.58.138.2", "kuaipai", "102030as.", "kuaipai")
+        db = pymysql.connect("登录你的数据库")
         sql = "INSERT INTO `paiming` (`id`, `title`, `url`, `page`, `p_index`, `create_time`) VALUES (NULL, '%s', '%s', '%d', '%d','%s');" % data
         cursor = db.cursor()
         try:
